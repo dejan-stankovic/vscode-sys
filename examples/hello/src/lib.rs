@@ -11,18 +11,17 @@ use wasm_bindgen::{prelude::*, JsCast};
 use wasm_bindgen_futures::future_to_promise;
 
 #[allow(non_snake_case)]
-fn command_helloWASM() {
-    vscode_sys::window.show_information_message("Hello from Rust!".into());
-}
-
-#[allow(non_snake_case)]
 async fn register_command_helloWASM(context: ExtensionContext) -> Result<JsValue, JsValue> {
+    use vscode_sys::{commands, window};
     let tag = "extension.helloWASM".into();
-    let clo = Closure::wrap(Box::new(command_helloWASM) as Box<dyn Fn()>);
+    let clo = Closure::<Fn()>::new(|| {
+        let msg = "Hello from Rust!".into();
+        window.show_information_message(msg);
+    });
     let fun = clo.as_ref().unchecked_ref();
     context
         .subscriptions()
-        .push(&vscode_sys::commands.register_command(tag, fun));
+        .push(&commands.register_command(tag, fun));
     clo.forget();
     Ok(JsValue::undefined())
 }

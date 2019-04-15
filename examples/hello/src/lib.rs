@@ -11,7 +11,7 @@ use wasm_bindgen::{prelude::*, JsCast};
 use wasm_bindgen_futures::future_to_promise;
 
 #[allow(non_snake_case)]
-pub async fn register_command_helloWASM(context: ExtensionContext) -> Result<JsValue, JsValue> {
+async fn register_command_helloWASM(context: ExtensionContext) -> Result<JsValue, JsValue> {
     let tag = "extension.helloWASM".into();
     let clo = Closure::wrap(Box::new(|| {
         let msg = "Hello from Rust!".into();
@@ -25,7 +25,7 @@ pub async fn register_command_helloWASM(context: ExtensionContext) -> Result<JsV
     Ok(JsValue::undefined())
 }
 
-pub async fn register_commands(context: ExtensionContext) -> Result<JsValue, JsValue> {
+async fn register_commands(context: ExtensionContext) -> Result<JsValue, JsValue> {
     await!(future::join_all(vec![register_command_helloWASM(context)]));
     Ok(JsValue::undefined())
 }

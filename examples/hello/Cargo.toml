@@ -13,11 +13,18 @@ crate-type = ["cdylib", "rlib"]
 default = ["console_error_panic_hook"]
 
 [dependencies]
-wasm-bindgen-futures = "0.3.19"
 
 [dependencies.console_error_panic_hook]
 version = "0.1.6"
 optional = true
+
+[dependencies.futures-preview]
+version = "0.3.0-alpha.14"
+features = ["compat", "nightly"]
+
+[dependencies.futures-util-preview]
+version = "0.3.0-alpha.14"
+features = ["compat", "nightly"]
 
 [dependencies.js-sys]
 version = "0.3.19"
@@ -29,3 +36,6 @@ path = "../.."
 [dependencies.wasm-bindgen]
 version = "0.2.42"
 features = ["serde-serialize", "nightly"]
+
+[dependencies.wasm-bindgen-futures]
+version = "0.3.19"

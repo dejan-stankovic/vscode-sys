@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "name": "hello",
+  "version": "0.0.0",
+  "license": "(Apache-2.0 OR MIT)",
+  "displayName": "hello",
+  "description": "An example Visual Studio Code extension written in Rust",
+  "engines": {
+    "vscode": "^1.33.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.helloWASM"
+  ],
+  "main": "./pkg/example_hello.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.helloWASM",
+        "title": "Hello WASM"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run prestart",
+    "prestart": "wasm-pack build --target nodejs",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  }
+}

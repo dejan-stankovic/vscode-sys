@@ -1,0 +1,31 @@
+[package]
+publish = false
+name = "example-hello"
+version = "0.0.0"
+license = "(Apache-2.0 OR MIT)"
+authors = ["Darin Morrison <freebroccolo@users.noreply.github.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = ["console_error_panic_hook"]
+
+[dependencies]
+wasm-bindgen-futures = "0.3.19"
+
+[dependencies.console_error_panic_hook]
+version = "0.1.6"
+optional = true
+
+[dependencies.js-sys]
+version = "0.3.19"
+features = []
+
+[dependencies.vscode-sys]
+path = "../.."
+
+[dependencies.wasm-bindgen]
+version = "0.2.42"
+features = ["serde-serialize", "nightly"]

@@ -1,0 +1,38 @@
+[package]
+name = "vscode-sys"
+version = "0.1.0"
+authors = ["Darin Morrison <freebroccolo@users.noreply.github.com>"]
+license = "MIT/Apache-2.0"
+readme = "README.md"
+categories = ["wasm"]
+repository = "https://github.com/freebroccolo/vscode-sys"
+description = """
+Raw bindings to the vscode API for projects using wasm-bindgen.
+"""
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+electron-sys = "0.1.0"
+node-sys = "0.1.0"
+serde = "1.0.90"
+serde_derive = "1.0.90"
+
+[dependencies.js-sys]
+version = "0.3.19"
+features = []
+
+[dependencies.web-sys]
+version = "0.3.19"
+features = []
+
+[dependencies.wasm-bindgen]
+version = "0.2.42"
+features = ["serde-serialize", "nightly"]
+
+[workspace]
+members = [
+  "examples/hello"
+]

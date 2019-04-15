@@ -13,14 +13,15 @@ use wasm_bindgen_futures::future_to_promise;
 #[allow(non_snake_case)]
 pub async fn register_command_helloWASM(context: ExtensionContext) -> Result<JsValue, JsValue> {
     let tag = "extension.helloWASM".into();
-    let clo = Closure::once_into_js(move || {
+    let clo = Closure::wrap(Box::new(|| {
         let msg = "Hello from Rust!".into();
         vscode_sys::window.show_information_message(msg);
-    });
+    }) as Box<dyn FnMut()>);
     let fun = clo.as_ref().unchecked_ref();
     context
         .subscriptions()
         .push(&vscode_sys::commands.register_command(tag, fun));
+    clo.forget();
     Ok(JsValue::undefined())
 }
 

@@ -18,7 +18,7 @@ fn command_helloWASM() {
 #[allow(non_snake_case)]
 async fn register_command_helloWASM(context: ExtensionContext) -> Result<JsValue, JsValue> {
     let tag = "extension.helloWASM".into();
-    let clo = Closure::wrap(Box::new(command_helloWASM) as Box<dyn FnMut()>);
+    let clo = Closure::wrap(Box::new(command_helloWASM) as Box<dyn Fn()>);
     let fun = clo.as_ref().unchecked_ref();
     context
         .subscriptions()

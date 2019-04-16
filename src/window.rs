@@ -8,5 +8,6 @@ extern "C" {
     pub static window: Window;
 
     #[wasm_bindgen(method, js_name = "showInformationMessage")]
+    #[must_use]
     pub fn show_information_message(this: &Window, msg: JsString) -> Promise;
 }

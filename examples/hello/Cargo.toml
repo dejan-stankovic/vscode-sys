@@ -39,3 +39,7 @@ features = ["serde-serialize", "nightly"]
 
 [dependencies.wasm-bindgen-futures]
 version = "0.3.19"
+
+[dependencies.web-sys]
+version = "*"
+features = ["console"]

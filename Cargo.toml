@@ -35,6 +35,10 @@ features = []
 version = "0.2.42"
 features = ["serde-serialize", "nightly"]
 
+[patch.crates-io]
+electron-sys = { path = "../electron-sys" }
+node-sys = { path = "../node-sys" }
+
 [workspace]
 members = [
   "examples/hello"

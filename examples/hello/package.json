@@ -6,7 +6,7 @@
   "displayName": "hello",
   "description": "An example Visual Studio Code extension written in Rust",
   "engines": {
-    "vscode": "^1.33.0"
+    "vscode": "^1.35.0"
   },
   "categories": [
     "Other"

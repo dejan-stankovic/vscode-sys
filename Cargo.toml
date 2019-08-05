@@ -15,7 +15,6 @@ edition = "2018"
 maintenance = { status = "experimental" }
 
 [lib]
-crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 electron-sys = "0.1.0"

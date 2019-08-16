@@ -14,9 +14,9 @@ use wasm_bindgen_futures::future_to_promise;
 async fn register_command_helloWASM(context: ExtensionContext) -> Result<JsValue, JsValue> {
     use vscode_sys::{commands, window};
     // invoked when the command "extension.helloWASM" is invoked
-    let clo = Closure::<Fn()>::new(|| {
+    let clo = Closure::<dyn Fn()>::new(|| {
         // invoked when the "show_information_message" API call (below) finishes
-        let clo = Closure::<FnMut(JsValue)>::new(|res| {
+        let clo = Closure::<dyn FnMut(JsValue)>::new(|res| {
             let args = Array::new();
             args.push(&"should be `undefined`:".into());
             args.push(&res);

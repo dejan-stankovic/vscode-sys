@@ -34,12 +34,8 @@ async fn register_command_helloWASM(context: ExtensionContext) -> Result<JsValue
 }
 
 async fn activate_future(context: ExtensionContext) -> Result<JsValue, JsValue> {
-    let mut tasks = Vec::new();
-    tasks.push(register_command_helloWASM(context));
-    future::join_all(tasks)
-        .await
-        .into_iter()
-        .collect::<Result<Vec<_>, _>>()?;
+    let futures = vec![register_command_helloWASM(context)];
+    future::try_join_all(futures).await?;
     Ok(JsValue::undefined())
 }
 

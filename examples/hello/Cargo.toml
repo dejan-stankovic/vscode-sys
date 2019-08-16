@@ -26,6 +26,10 @@ features = ["async-await", "compat", "nightly"]
 version = "=0.3.0-alpha.18"
 features = ["async-await", "compat", "nightly"]
 
+[dependencies.getrandom]
+version = "0.1.9"
+features = ["wasm-bindgen"]
+
 [dependencies.js-sys]
 version = "0.3.26"
 features = []

@@ -1,9 +1,6 @@
 #![feature(async_await)]
-#![feature(await_macro)]
-#![feature(futures_api)]
-#![feature(impl_trait_in_bindings)]
 
-use futures::{prelude::*, FutureExt};
+use futures::prelude::*;
 use futures_util::compat::Compat;
 use js_sys::{Array, Promise};
 use vscode_sys::ExtensionContext;
@@ -37,7 +34,7 @@ async fn register_command_helloWASM(context: ExtensionContext) -> Result<JsValue
 }
 
 async fn activate_future(context: ExtensionContext) -> Result<JsValue, JsValue> {
-    await!(future::join_all(vec![register_command_helloWASM(context)]));
+    future::join_all(vec![register_command_helloWASM(context)]).await;
     Ok(JsValue::undefined())
 }
 
@@ -45,7 +42,7 @@ async fn activate_future(context: ExtensionContext) -> Result<JsValue, JsValue> 
 pub fn activate(context: ExtensionContext) -> Promise {
     console_error_panic_hook::set_once();
     let future = activate_future(context);
-    let pinned = future.boxed();
+    let pinned = Box::pin(future);
     let compat = Compat::new(pinned);
     future_to_promise(compat) // FIXME: wasm-bindgen-futures still uses old API
 }

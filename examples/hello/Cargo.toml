@@ -19,27 +19,27 @@ version = "0.1.6"
 optional = true
 
 [dependencies.futures-preview]
-version = "0.3.0-alpha.14"
-features = ["compat", "nightly"]
+version = "=0.3.0-alpha.18"
+features = ["async-await", "compat", "nightly"]
 
 [dependencies.futures-util-preview]
-version = "0.3.0-alpha.14"
-features = ["compat", "nightly"]
+version = "=0.3.0-alpha.18"
+features = ["async-await", "compat", "nightly"]
 
 [dependencies.js-sys]
-version = "0.3.19"
+version = "0.3.26"
 features = []
 
 [dependencies.vscode-sys]
 path = "../.."
 
 [dependencies.wasm-bindgen]
-version = "0.2.42"
+version = "0.2.49"
 features = ["serde-serialize", "nightly"]
 
 [dependencies.wasm-bindgen-futures]
-version = "0.3.19"
+version = "0.3.26"
 
 [dependencies.web-sys]
-version = "*"
+version = "0.3.26"
 features = ["console"]

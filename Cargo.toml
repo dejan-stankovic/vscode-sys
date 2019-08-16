@@ -19,19 +19,19 @@ maintenance = { status = "experimental" }
 [dependencies]
 electron-sys = "0.1.0"
 node-sys = "0.1.0"
-serde = "1.0.90"
-serde_derive = "1.0.90"
+serde = "1.0.98"
+serde_derive = "1.0.98"
 
 [dependencies.js-sys]
-version = "0.3.19"
+version = "0.3.26"
 features = []
 
 [dependencies.web-sys]
-version = "0.3.19"
+version = "0.3.26"
 features = []
 
 [dependencies.wasm-bindgen]
-version = "0.2.42"
+version = "0.2.49"
 features = ["serde-serialize", "nightly"]
 
 [patch.crates-io]

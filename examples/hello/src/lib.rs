@@ -1,5 +1,3 @@
-#![feature(async_await)]
-
 use futures::prelude::*;
 use futures_util::compat::Compat;
 use js_sys::{Array, Promise};

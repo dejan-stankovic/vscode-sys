@@ -32,7 +32,7 @@ features = []
 
 [dependencies.wasm-bindgen]
 version = "0.2.49"
-features = ["serde-serialize", "nightly"]
+features = ["serde-serialize", "strict-macro", "nightly"]
 
 [patch.crates-io]
 electron-sys = { path = "../electron-sys" }

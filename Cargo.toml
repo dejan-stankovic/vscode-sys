@@ -16,6 +16,8 @@ maintenance = { status = "experimental" }
 
 [lib]
 crate-type = ["cdylib", "rlib"]
+doctest = false
+test = false
 
 [dependencies.serde]
 version = "^1.0.102"

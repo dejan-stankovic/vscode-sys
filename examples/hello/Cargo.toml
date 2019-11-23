@@ -11,6 +11,8 @@ maintenance = { status = "experimental" }
 
 [lib]
 crate-type = ["cdylib", "rlib"]
+doctest = false
+test = false
 
 [features]
 default = ["console_error_panic_hook"]

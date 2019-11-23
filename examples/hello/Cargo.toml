@@ -23,11 +23,11 @@ optional = true
 
 [dependencies.futures-preview]
 version = "=0.3.0-alpha.19"
-features = ["async-await", "compat"]
+features = ["async-await"]
 
 [dependencies.futures-util-preview]
 version = "=0.3.0-alpha.19"
-features = ["async-await", "compat"]
+features = ["async-await"]
 
 [dependencies.getrandom]
 version = "^0.1.9"

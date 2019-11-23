@@ -41,10 +41,6 @@ features = []
 version = "^0.2.55"
 features = ["serde-serialize", "strict-macro"]
 
-[patch.crates-io]
-electron-sys = { path = "../electron-sys" }
-node-sys = { path = "../node-sys" }
-
 [workspace]
 members = [
   "examples/hello"

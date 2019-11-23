@@ -1,10 +1,11 @@
 [package]
 publish = false
+edition = "2018"
 name = "example-hello"
 version = "0.0.0"
 license = "(Apache-2.0 OR MIT)"
 authors = ["Darin Morrison <freebroccolo@users.noreply.github.com>"]
-edition = "2018"
+
 
 [lib]
 crate-type = ["cdylib"]

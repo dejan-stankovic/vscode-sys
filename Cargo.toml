@@ -16,22 +16,26 @@ maintenance = { status = "experimental" }
 
 [lib]
 
-[dependencies]
-electron-sys = "0.1.0"
-node-sys = "0.1.0"
-serde = "1.0.98"
-serde_derive = "1.0.98"
+[dependencies.serde]
+version = "^1.0.102"
+features = ["derive"]
+
+[dependencies.electron-sys]
+git = "https://github.com/interfaces-rs/electron-sys"
+
+[dependencies.node-sys]
+git = "https://github.com/interfaces-rs/node-sys"
 
 [dependencies.js-sys]
-version = "0.3.26"
+version = "^0.3.32"
 features = []
 
 [dependencies.web-sys]
-version = "0.3.26"
+version = "^0.3.32"
 features = []
 
 [dependencies.wasm-bindgen]
-version = "0.2.49"
+version = "^0.2.55"
 features = ["serde-serialize", "strict-macro"]
 
 [patch.crates-io]

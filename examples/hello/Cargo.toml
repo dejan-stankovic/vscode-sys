@@ -8,7 +8,7 @@ authors = ["Darin Morrison <freebroccolo@users.noreply.github.com>"]
 
 
 [lib]
-crate-type = ["cdylib"]
+crate-type = ["cdylib", "rlib"]
 
 [features]
 default = ["console_error_panic_hook"]

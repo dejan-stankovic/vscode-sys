@@ -15,6 +15,7 @@ Raw bindings to the vscode API for projects using wasm-bindgen.
 maintenance = { status = "experimental" }
 
 [lib]
+crate-type = ["cdylib", "rlib"]
 
 [dependencies.serde]
 version = "^1.0.102"

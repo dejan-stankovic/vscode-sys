@@ -1,8 +1,28 @@
-# vscode-sys
+<div align="center">
+  <h1><code>vscode-sys</code></h1>
+  <p>
+    <strong>Raw bindings to the <a href="https://code.visualstudio.com/"><code>Visual Studio Code</code></a>
+      API for projects using <a href="https://github.com/rustwasm/wasm-bindgen"><code>wasm-bindgen</code></a></strong>
+  </p>
+  <p style="margin-bottom: 0.5ex;">
+    <a href="https://interfaces-rs.github.io/vscode-sys"><img
+        src="https://img.shields.io/badge/docs-latest-blueviolet?logo=Read-the-docs&logoColor=white"
+        /></a>
+    <a href="https://github.com/interfaces-rs/vscode-sys/actions"><img
+        src="https://github.com/interfaces-rs/vscode-sys/workflows/ci/badge.svg"
+        /></a>
+    <a href="https://crates.io/crates/vscode-sys"><img
+        src="https://img.shields.io/librariesio/release/cargo/vscode-sys.svg?logo=rust"
+        /></a>
+  </p>
+  <p style="margin-bottom: 0.5ex;">
+    <a href="https://docs.rs/vscode-sys"><img
+        src="https://docs.rs/vscode-sys/badge.svg" /></a>
+    <a href="https://crates.io/crates/vscode-sys"><img
+        src="https://img.shields.io/crates/v/vscode-sys.svg?logo=rust" /></a>
+  </p>
+</div>
 
-![Crates.io version shield](https://img.shields.io/crates/v/vscode-sys.svg?style=flat-square&logo=rust)
-![Crates.io license shield](https://img.shields.io/crates/l/vscode-sys.svg?style=flat-square&logo=github)
-![Crates.io dependency shield](https://img.shields.io/librariesio/release/cargo/vscode-sys.svg?style=flat-square&logo=rust)
-![Crates.io build shield](https://img.shields.io/badge/build-unknown-yellow.svg?style=flat-square&logo=azuredevops)
+## Status
 
-Raw bindings to the vscode API for projects using wasm-bindgen.
+Experimental

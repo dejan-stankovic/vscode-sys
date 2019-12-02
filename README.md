@@ -1,7 +1,7 @@
 <div align="center">
   <h1><code>vscode-sys</code></h1>
   <p>
-    <strong>Raw bindings to the <a href="https://code.visualstudio.com/"><code>Visual Studio Code</code></a>
+    <strong>Raw bindings to the <a href="https://code.visualstudio.com/"><code>vscode</code></a>
       API for projects using <a href="https://github.com/rustwasm/wasm-bindgen"><code>wasm-bindgen</code></a></strong>
   </p>
   <p style="margin-bottom: 0.5ex;">

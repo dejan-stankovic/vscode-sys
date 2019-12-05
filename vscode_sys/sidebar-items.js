@@ -1,0 +1,1 @@
+initSidebarItems({"static":[["commands",""],["window",""]],"struct":[["Commands",""],["Disposable",""],["ExtensionContext",""],["Window",""]]});

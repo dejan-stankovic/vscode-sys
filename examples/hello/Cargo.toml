@@ -30,7 +30,7 @@ version = "=0.3.0-alpha.19"
 features = ["async-await"]
 
 [dependencies.getrandom]
-version = "^0.1.9"
+version = "^0.1.14"
 features = ["wasm-bindgen"]
 
 [dependencies.js-sys]

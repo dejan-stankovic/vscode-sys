@@ -20,7 +20,7 @@ doctest = false
 test = false
 
 [dependencies.serde]
-version = "^1.0.102"
+version = "^1.0.114"
 features = ["derive"]
 
 [dependencies.electron-sys]
